@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://de7yojfvjghp5"]
+
+[ext_resource type="PackedScene" uid="uid://b3yk6lw3lcghj" path="res://player.tscn" id="1_aob2k"]
+[ext_resource type="PackedScene" uid="uid://33iyh0wtmpod" path="res://goal.tscn" id="2_dqkrn"]
+[ext_resource type="PackedScene" uid="uid://dqhkhnu3y677d" path="res://devil.tscn" id="3_2f2r1"]
+[ext_resource type="PackedScene" uid="uid://d24kxa3pi8xto" path="res://platform.tscn" id="4_immqt"]
+[ext_resource type="PackedScene" uid="uid://c0qn4o0lx23o2" path="res://bouncy.tscn" id="5_rd4aq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j8vpl"]
+sky_top_color = Color(0.658738, 0.730855, 0.622107, 1)
+sky_horizon_color = Color(0.669224, 0.62206, 0.614089, 1)
+sky_curve = 0.144891
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_nren2"]
+sky_material = SubResource("ProceduralSkyMaterial_j8vpl")
+
+[sub_resource type="Environment" id="Environment_b4swv"]
+background_mode = 2
+sky = SubResource("Sky_nren2")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_u258g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0uuny"]
+albedo_color = Color(0, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 26.05
+emission_operator = 1
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_b4swv")
+
+[node name="lilguy" parent="." instance=ExtResource("1_aob2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8595, 14.0446, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0165624, 0.999863, 0, -0.999863, 0.0165624, 0, 50.9074, 0)
+light_color = Color(0.558129, 0.739618, 0.553759, 1)
+light_energy = 30.165
+light_indirect_energy = 1.865
+spot_range = 169.641
+
+[node name="goal" parent="." instance=ExtResource("2_dqkrn")]
+transform = Transform3D(-0.028445, 0, 0.999595, 0, 1, 0, -0.999595, 0, -0.028445, -10.7964, 14.5842, -0.0835767)
+
+[node name="devil" parent="." instance=ExtResource("3_2f2r1")]
+transform = Transform3D(0.433748, 0, 15.2989, 0, 15.305, 0, -15.2989, 0, 0.433748, 0.626697, 5.21318, 23.2634)
+
+[node name="devil2" parent="." instance=ExtResource("3_2f2r1")]
+transform = Transform3D(-0.550687, 0, -15.2951, 0, 15.305, 0, 15.2951, 0, -0.550687, 0.626697, 5.21318, -25.1636)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(113.61, 0, 0, 0, 1, 0, 0, 0, 147.086, 0, -0.792354, 0)
+mesh = SubResource("PlaneMesh_u258g")
+surface_material_override/0 = SubResource("StandardMaterial3D_0uuny")
+
+[node name="Node3D" parent="." instance=ExtResource("4_immqt")]
+transform = Transform3D(5.87601, 0, 0, 0, 1, 0, 0, 0, 1, 14.0773, 12.8982, -0.173917)
+
+[node name="bouncy" parent="." instance=ExtResource("5_rd4aq")]
+transform = Transform3D(0.930418, -0.366501, 0, 0.366501, 0.930418, 0, 0, 0, 1, 0.308251, 0.202981, 0.176785)
+
+[node name="Node3D2" parent="." instance=ExtResource("4_immqt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2355, 12.8982, -0.173917)

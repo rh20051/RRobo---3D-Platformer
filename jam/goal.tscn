@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://33iyh0wtmpod"]
+
+[ext_resource type="Script" path="res://goal.gd" id="1_6q4qx"]
+[ext_resource type="Texture2D" uid="uid://co1krb4krxt2h" path="res://Blue Star.png" id="2_i7vwr"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_la14n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nu0rn"]
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("2_i7vwr")
+emission_enabled = true
+emission = Color(0.0581797, 0.467642, 0.467793, 1)
+emission_energy_multiplier = 1.22
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xjuj4"]
+radius = 1.62323
+
+[node name="goal" type="Node3D"]
+script = ExtResource("1_6q4qx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0124613, -0.999922, 0, 0.999922, 0.0124613, 0, 0, 0)
+mesh = SubResource("PlaneMesh_la14n")
+surface_material_override/0 = SubResource("StandardMaterial3D_nu0rn")
+
+[node name="Area3D" type="Area3D" parent="." groups=["goal"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_xjuj4")
+
+[connection signal="body_entered" from="Area3D" to="." method="playerEntered"]
