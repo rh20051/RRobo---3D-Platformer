@@ -1,0 +1,16 @@
+res://bouncy.tscn::0033274574a4eff3b44db3414bb01c0d::1789717951::res://.godot/exported/133200997/export-64bbcf7965f3d93ff42b3a74726171fd-bouncy.scn
+res://devil.tscn::bbbb3e8e9b1a10255f99113ba5972871::1789717951::res://.godot/exported/133200997/export-72523924d6dfdb03c3c1bef4fea25575-devil.scn
+res://goal.tscn::5130321573ac0a44de0d921e962f57ce::1789717951::res://.godot/exported/133200997/export-45c790992f83a0918c1e293652719be4-goal.scn
+res://level1.tscn::69e18f566dbc742691d911eca831de5f::1789717951::res://.godot/exported/133200997/export-de0a23908fc8e82e442fb3d544df059d-level1.scn
+res://level2.tscn::948ab85afe893ae3b1d0e99b3438b4ec::1789731961::res://.godot/exported/133200997/export-6aff87dc80077bd6d05fecea6445880a-level2.scn
+res://level3.tscn::524ff3405cb7c9d41b98d309200a61a9::1789732168::res://.godot/exported/133200997/export-0a575a936f2772c13bd159b39f95aaae-level3.scn
+res://level4.tscn::d4e3f2bcf9d0a8fd46b87746c1a21bce::1789717951::res://.godot/exported/133200997/export-bc7f57688221d9a4adb86faa22bb3e94-level4.scn
+res://level5.tscn::58f962df0f5d3926601aeb78c679b7c8::1789717951::res://.godot/exported/133200997/export-89f02a27ec583a2c0f50cfbb702a1fcf-level5.scn
+res://level6.tscn::beb4a04789e0ae2c5126c6fd59b6ecb0::1789717951::res://.godot/exported/133200997/export-894483203f507e4caee111e4aa8cffee-level6.scn
+res://level7.tscn::7e8f1aec4f232f4f30865c5e5d10c5d4::1789717951::res://.godot/exported/133200997/export-f09967fd26ace5d63486fe9cdb4f5ca5-level7.scn
+res://level8.tscn::c99b6545e1901b87f53f7f6149e4f288::1789717951::res://.godot/exported/133200997/export-e15a66d343833aa0d60469279f5ab6c3-level8.scn
+res://mainMenu.tscn::786911832facf148a39ca885cdc5e70a::1789717951::res://.godot/exported/133200997/export-1dc88af85464c8ee3840b53799a15bf2-mainMenu.scn
+res://movingplatform.tscn::217e99dfd0498fc57ac5c3474f738733::1789717951::res://.godot/exported/133200997/export-8bcc5c0f8817c488cac1e8ffc38de09f-movingplatform.scn
+res://platform.tscn::bae4e2132be3d86547c422fde82d7db8::1789717951::res://.godot/exported/133200997/export-991b5dfe9c806159464ca619fc6762df-platform.scn
+res://player.tscn::1df9649f3e6dad74a32bbecfc8dfc084::1789731919::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn
+res://sticky.tscn::18b7bc2079c4f4aa55889a01e18b2237::1789732100::res://.godot/exported/133200997/export-970b5b3b1a5b9e52d3d21aaf1e2dd306-sticky.scn

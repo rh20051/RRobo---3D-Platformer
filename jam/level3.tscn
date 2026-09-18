@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://ysddlib0syi0"]
+[gd_scene format=4 uid="uid://ysddlib0syi0"]
 
 [ext_resource type="PackedScene" uid="uid://b3yk6lw3lcghj" path="res://player.tscn" id="1_qac5s"]
 [ext_resource type="PackedScene" uid="uid://33iyh0wtmpod" path="res://goal.tscn" id="2_6kjue"]
@@ -77,53 +77,53 @@ shadow_mesh = SubResource("ArrayMesh_7vx1i")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hl6os"]
 albedo_color = Color(0.141176, 0, 0.0901961, 1)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" unique_id=1013474478]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1660805368]
 environment = SubResource("Environment_0jxdu")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=379731872]
 transform = Transform3D(29.5476, 0, 0, 0, 0.200202, 0, 0, 0, 26.5175, 0, -0.674515, 0)
 visible = false
 mesh = SubResource("BoxMesh_0gnmn")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1721913123]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=445714482]
 transform = Transform3D(29.5417, 0, 0, 0, 0.200202, 0, 0, 0, 26.5274, 0, -0.674515, 0)
 shape = SubResource("ConcavePolygonShape3D_kwqhb")
 
-[node name="lilguy" parent="." instance=ExtResource("1_qac5s")]
+[node name="lilguy" parent="." unique_id=1585350973 instance=ExtResource("1_qac5s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.481223, 0)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1143807723]
 transform = Transform3D(1, 0, 0, 0, 0.0165624, 0.999863, 0, -0.999863, 0.0165624, 0, 50.9074, 0)
 light_color = Color(0.621394, 0.808199, 0.770604, 1)
 light_energy = 30.165
 light_indirect_energy = 1.865
 spot_range = 169.641
 
-[node name="goal" parent="." instance=ExtResource("2_6kjue")]
+[node name="goal" parent="." unique_id=1708881670 instance=ExtResource("2_6kjue")]
 transform = Transform3D(-0.00919783, 0, -0.999957, 0, 1, 0, 0.999957, 0, -0.00919783, 6.25525, 10.7977, 0.195189)
 
-[node name="devil" parent="." instance=ExtResource("3_3wgms")]
+[node name="devil" parent="." unique_id=2095652046 instance=ExtResource("3_3wgms")]
 transform = Transform3D(0.433748, 0, 15.2989, 0, 15.305, 0, -15.2989, 0, 0.433748, 0.626697, 5.21318, 23.2634)
 
-[node name="devil2" parent="." instance=ExtResource("3_3wgms")]
+[node name="devil2" parent="." unique_id=1648376305 instance=ExtResource("3_3wgms")]
 transform = Transform3D(-0.550687, 0, -15.2951, 0, 15.305, 0, 15.2951, 0, -0.550687, 0.626697, 5.21318, -25.1636)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=878370327]
 transform = Transform3D(113.61, 0, 0, 0, 1, 0, 0, 0, 147.086, 0, -0.792354, 0)
 mesh = SubResource("PlaneMesh_61mrw")
 surface_material_override/0 = SubResource("StandardMaterial3D_aw7nn")
 
-[node name="sticky" parent="." instance=ExtResource("4_g401g")]
+[node name="sticky" parent="." unique_id=1553945154 instance=ExtResource("4_g401g")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -11.743, 7.4923, 0.124275)
 
-[node name="Node3D" parent="." instance=ExtResource("5_6b11k")]
+[node name="Node3D" parent="." unique_id=571284621 instance=ExtResource("5_6b11k")]
 transform = Transform3D(4.82894, 0, 0, 0, 1, 0, 0, 0, 1, -0.921115, 6.63702, 0.0279839)
 
-[node name="Cube" type="MeshInstance3D" parent="."]
+[node name="Cube" type="MeshInstance3D" parent="." unique_id=203955871]
 transform = Transform3D(14.4334, 0, 0, 0, 0.2, 0, 0, 0, 12.863, 0, -0.742379, 0)
 mesh = SubResource("ArrayMesh_75joo")
 skeleton = NodePath("")

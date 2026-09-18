@@ -1,0 +1,51 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1789731554
+animationControl.gd::GDScript::6268111388016344795::1789722189::0::1::::<>Node<><>0<>0<><>::
+anims.res::AnimationLibrary::6383897921145090876::1789717951::0::1::::<><><>0<>0<><>::
+Blue Star.png::CompressedTexture2D::5809796626148934577::1789717951::1789717975::1::::<><><>0<>0<>53731b2ade5b86db44fec39ab446f07e<>res://.godot/imported/Blue Star.png-a1fd00d4c5979b9360b622efe4602e2f.s3tc.ctex::
+bouncy.gd::GDScript::9646262370875445::1789717951::0::1::::<>StaticBody3D<><>0<>0<><>::
+bouncy.tscn::PackedScene::6561434385809806031::1789717951::0::1::::<><><>0<>0<><>::res://bouncy.gd<>uid://b2fberdpskyk2::::res://brickBlue.jpg<>uid://bnyysw5771d28::::res://sfx100v2_hit_03.ogg
+brickBlue.jpg::CompressedTexture2D::4291910109096032607::1789717951::1789717975::1::::<><><>0<>0<>722bee3bc75e2cee73adfa916a094520<>res://.godot/imported/brickBlue.jpg-17aec4d8ddec9d058266a0780687a11c.s3tc.ctex::
+brickGreen.jpg::CompressedTexture2D::1668752082892542521::1789717951::1789717975::1::::<><><>0<>0<>f2e2ad6f9a284b91e5d909e712095ee4<>res://.godot/imported/brickGreen.jpg-976baaceec3f9cca13ab39b3d017b370.s3tc.ctex::
+brickOrange.jpg::CompressedTexture2D::2518020655805104160::1789717951::1789717975::1::::<><><>0<>0<>4ae0d5c1802049596017a043bd0bceaf<>res://.godot/imported/brickOrange.jpg-9242cd0e6f09e6db3d69db7464f5cd09.ctex::
+click.7.ogg::AudioStreamOggVorbis::5057237974574000264::1789717951::1789717975::1::::<><><>0<>0<>caf7241ed7ab513372e070f301459e5e<>res://.godot/imported/click.7.ogg-d7542cbdae484fe3f0d2d179d9f91c3b.oggvorbisstr::
+devil.gd::GDScript::1272769915112482761::1789717951::0::1::::<>Node3D<><>0<>0<><>::
+devil.glb::PackedScene::2661536981661061164::1789717951::1789717975::1::::<><><>0<>0<>df8e55b39bfd2b3303deaaef70e9bc2d<>res://.godot/imported/devil.glb-5612f8c7faaac8911687684ea98ebe7e.scn::uid://b4ujchp506v00::::res://devil_head Base Color.png<>uid://d3m2w65jmjpbk::::res://devil_horns Base Color.png<>uid://bg01f030rocnd::::res://devil_body Base Color.png
+devil.tscn::PackedScene::8297354579056399291::1789717951::0::1::::<><><>0<>0<><>::res://devil.gd<>uid://bg01f030rocnd::::res://devil_body Base Color.png<>uid://b4ujchp506v00::::res://devil_head Base Color.png<>uid://d3m2w65jmjpbk::::res://devil_horns Base Color.png<>uid://ceb0788i8usvg::::res://click.7.ogg
+devil_body Base Color.png::CompressedTexture2D::2860752117651675877::1789717951::1789717975::1::::<><><>0<>0<>8bdfe4d088fd4680eaa6eb4079b57a7c<>res://.godot/imported/devil_body Base Color.png-2854b23e59e2475941cb6d210c209a61.s3tc.ctex::
+devil_head Base Color.png::CompressedTexture2D::4463735121033175623::1789717951::1789717975::1::::<><><>0<>0<>d26cf0cf3543abf117a3f327acf7aa7c<>res://.godot/imported/devil_head Base Color.png-40b260906f72d639c94717c01d5d4850.s3tc.ctex::
+devil_horns Base Color.png::CompressedTexture2D::9151002527256842384::1789717951::1789717975::1::::<><><>0<>0<>7ffb78cc4846f231c2aa3335c5b093e9<>res://.godot/imported/devil_horns Base Color.png-e1e35e5213c8675229a361ed4db25ee3.s3tc.ctex::
+export_presets.cfg::TextFile::-1::1789717951::0::1::::<><><>0<>0<><>::
+global.gd::GDScript::944259353269670603::1789717951::0::1::::<>Node<><>0<>0<><>::
+goal.gd::GDScript::8010987280918406511::1789717951::0::1::::<>Node3D<><>0<>0<><>::
+goal.tscn::PackedScene::2023619201283450283::1789717951::0::1::::<><><>0<>0<><>::res://goal.gd<>uid://co1krb4krxt2h::::res://Blue Star.png
+icon.svg::CompressedTexture2D::8940468360190548894::1789717951::1789717975::1::::<><><>0<>0<>98dad037c1682dae2d6357b6dadb4e91<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+level1.tscn::PackedScene::8799702435907876344::1789717951::0::1::::<><><>0<>0<><>::uid://b3yk6lw3lcghj::::res://player.tscn<>uid://33iyh0wtmpod::::res://goal.tscn<>uid://dqhkhnu3y677d::::res://devil.tscn<>uid://d24kxa3pi8xto::::res://platform.tscn
+level2.tscn::PackedScene::6011106077859689998::1789717951::0::1::::<><><>0<>0<><>::uid://b3yk6lw3lcghj::::res://player.tscn<>uid://33iyh0wtmpod::::res://goal.tscn<>uid://dqhkhnu3y677d::::res://devil.tscn<>uid://d24kxa3pi8xto::::res://platform.tscn
+level3.tscn::PackedScene::1721879145440733513::1789717951::0::1::::<><><>0<>0<><>::uid://b3yk6lw3lcghj::::res://player.tscn<>uid://33iyh0wtmpod::::res://goal.tscn<>uid://dqhkhnu3y677d::::res://devil.tscn<>uid://dmfotl437hjlo::::res://sticky.tscn<>uid://d24kxa3pi8xto::::res://platform.tscn
+level4.tscn::PackedScene::6549700324861776269::1789717951::0::1::::<><><>0<>0<><>::uid://b3yk6lw3lcghj::::res://player.tscn<>uid://33iyh0wtmpod::::res://goal.tscn<>uid://dqhkhnu3y677d::::res://devil.tscn<>uid://dmfotl437hjlo::::res://sticky.tscn
+level5.tscn::PackedScene::3745512753263668312::1789717951::0::1::::<><><>0<>0<><>::uid://b3yk6lw3lcghj::::res://player.tscn<>uid://33iyh0wtmpod::::res://goal.tscn<>uid://dqhkhnu3y677d::::res://devil.tscn<>uid://dv00p7ovudanv::::res://movingplatform.tscn
+level6.tscn::PackedScene::7507560204102997976::1789717951::0::1::::<><><>0<>0<><>::uid://b3yk6lw3lcghj::::res://player.tscn<>uid://33iyh0wtmpod::::res://goal.tscn<>uid://dqhkhnu3y677d::::res://devil.tscn<>uid://d24kxa3pi8xto::::res://platform.tscn<>uid://c0qn4o0lx23o2::::res://bouncy.tscn
+level7.tscn::PackedScene::1460167649545807608::1789717951::0::1::::<><><>0<>0<><>::uid://b3yk6lw3lcghj::::res://player.tscn<>uid://33iyh0wtmpod::::res://goal.tscn<>uid://dqhkhnu3y677d::::res://devil.tscn<>uid://d24kxa3pi8xto::::res://platform.tscn<>uid://c0qn4o0lx23o2::::res://bouncy.tscn<>uid://dmfotl437hjlo::::res://sticky.tscn<>uid://dv00p7ovudanv::::res://movingplatform.tscn
+level8.tscn::PackedScene::5385041396555571571::1789717951::0::1::::<><><>0<>0<><>::uid://b3yk6lw3lcghj::::res://player.tscn<>uid://33iyh0wtmpod::::res://goal.tscn<>uid://dqhkhnu3y677d::::res://devil.tscn<>uid://dmfotl437hjlo::::res://sticky.tscn<>uid://c0qn4o0lx23o2::::res://bouncy.tscn<>uid://d24kxa3pi8xto::::res://platform.tscn
+mainMenu.png::CompressedTexture2D::7309157962505375827::1789717951::1789717975::1::::<><><>0<>0<>85e0846e8c4e2c57ed7b8027bfde6c61<>res://.godot/imported/mainMenu.png-cf9da93df5d94d64787f11e039b80d77.ctex::
+mainMenu.tscn::PackedScene::8138874766682054247::1789717951::0::1::::<><><>0<>0<><>::res://main_menu.gd<>uid://dceu0754ql80f::::res://mainMenu.png
+main_menu.gd::GDScript::3117253600004634462::1789717951::0::1::::<>Node2D<><>0<>0<><>::
+modelle.glb::PackedScene::4137206538153934139::1789717951::1789717975::1::::<><><>0<>0<>cbabfc4ec93ce438198bd13a743d65c2<>res://.godot/imported/modelle.glb-86f00c0aa543aae34e3160058d95fa6c.scn::
+movingplatform.gd::GDScript::3331444549990172773::1789717951::0::1::::<>CharacterBody3D<><>0<>0<><>::
+movingplatform.tscn::PackedScene::8686383626412668103::1789717951::0::1::::<><><>0<>0<><>::res://movingplatform.gd
+platform.tscn::PackedScene::9114876071309458264::1789717951::0::1::::<><><>0<>0<><>::
+player.gd::GDScript::5354429300065174446::1789722414::0::1::::<>CharacterBody3D<><>0<>0<><>::
+player.tscn::PackedScene::4401916514223684943::1789722441::0::1::::<><><>0<>0<><>::uid://cijywysc3r3uo::::res://player.gd<>uid://cvkk444q2k5ml::::res://animationControl.gd<>uid://bbqo57nmy57eu::::res://robo_robo Base Color.png<>uid://gpr4w8el4bbo::::res://snd_player_jump.ogg
+robo.glb::PackedScene::5572124778728960236::1789717951::1789717975::1::::<><><>0<>0<>769c0c0f48a96e102b04684e6aba53b6<>res://.godot/imported/robo.glb-44fc0be500eb66c496a6dcbc011d5b18.scn::uid://bbqo57nmy57eu::::res://robo_robo Base Color.png
+robobo.glb::PackedScene::8277425446009221707::1789717951::1789717975::1::::<><><>0<>0<>4dc79fa18c2d6a6948e38252aa62f49d<>res://.godot/imported/robobo.glb-0db1f29acb7e424f4e5c577b7212926d.scn::uid://cgyqm5my2lqg4::::res://robobo_robo Base Color.png
+robobobo.glb::PackedScene::2203203756937784834::1789717951::1789717975::1::::<><><>0<>0<>9276c0f7b8f97f7cc579d94f525a00ad<>res://.godot/imported/robobobo.glb-0f02f84ff0068c05c6072b225b3fc8c1.scn::uid://64kvm8n81g0l::::res://robobobo_robo Base Color.png
+robobobo_robo Base Color.png::CompressedTexture2D::2236366461140941621::1789717951::1789717975::1::::<><><>0<>0<>cbc60c8658d2fd83c946cab7ec414924<>res://.godot/imported/robobobo_robo Base Color.png-319d6d7efb65915932356158172d9f3c.s3tc.ctex::
+robobo_robo Base Color.png::CompressedTexture2D::5244513992088092849::1789717951::1789717975::1::::<><><>0<>0<>982f87479ff3b8ff28bcdc86743ec143<>res://.godot/imported/robobo_robo Base Color.png-478064bab138eff4d60c946f89f80562.s3tc.ctex::
+robo_robo Base Color.png::CompressedTexture2D::2490544884520142668::1789717951::1789717975::1::::<><><>0<>0<>348e89e018efa642fa3f4cc6307de52d<>res://.godot/imported/robo_robo Base Color.png-8db435d644926727cb411002cf63efe0.s3tc.ctex::
+sfx100v2_hit_02.ogg::AudioStreamOggVorbis::5576855818585461597::1789717951::1789717975::1::::<><><>0<>0<>2da1a094bad1ae445f033ada99304656<>res://.godot/imported/sfx100v2_hit_02.ogg-e6cdc5710a7c81fbd6ccab38a3068081.oggvorbisstr::
+sfx100v2_hit_03.ogg::AudioStreamOggVorbis::3349911272557198227::1789717951::1789717975::1::::<><><>0<>0<>58fdcc2bcf8c796937c55a67dcc3db1a<>res://.godot/imported/sfx100v2_hit_03.ogg-f8be7b2b0f87abab4f92bb8aa1d5b91f.oggvorbisstr::
+snd_player_jump.ogg::AudioStreamOggVorbis::453183911729194124::1789717951::1789717975::1::::<><><>0<>0<>d86629e1e1ed867aa36a7edc369a054b<>res://.godot/imported/snd_player_jump.ogg-b3776437e198d11c406a283e4973d537.oggvorbisstr::
+sticky.gd::GDScript::8686241983881795014::1789717951::0::1::::<>StaticBody3D<><>0<>0<><>::
+sticky.tscn::PackedScene::8012734655360334368::1789717951::0::1::::<><><>0<>0<><>::res://sticky.gd<>uid://x1mdrchjrxg0::::res://brickGreen.jpg<>uid://clpqaavl8yp6t::::res://sfx100v2_hit_02.ogg
+SunsetWalk.ogg::AudioStreamOggVorbis::3921222710497968054::1789717951::1789717975::1::::<><><>0<>0<>5efed2f115da92281c4ddf357c721bf3<>res://.godot/imported/SunsetWalk.ogg-eac22d6b4c9d4699bda382e61eedaa23.oggvorbisstr::

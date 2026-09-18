@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://dmfotl437hjlo"]
+[gd_scene format=4 uid="uid://dmfotl437hjlo"]
 
-[ext_resource type="Script" path="res://sticky.gd" id="1_qhfyq"]
+[ext_resource type="Script" uid="uid://dv0xevxaqvgyw" path="res://sticky.gd" id="1_qhfyq"]
 [ext_resource type="Texture2D" uid="uid://x1mdrchjrxg0" path="res://brickGreen.jpg" id="2_s4hac"]
 [ext_resource type="AudioStream" uid="uid://clpqaavl8yp6t" path="res://sfx100v2_hit_02.ogg" id="3_41ru6"]
 
@@ -8,7 +8,7 @@
 data = PackedVector3Array(-1.5, 0.1, 1.5, 1.5, 0.1, 1.5, -1.5, -0.1, 1.5, 1.5, 0.1, 1.5, 1.5, -0.1, 1.5, -1.5, -0.1, 1.5, 1.5, 0.1, -1.5, -1.5, 0.1, -1.5, 1.5, -0.1, -1.5, -1.5, 0.1, -1.5, -1.5, -0.1, -1.5, 1.5, -0.1, -1.5, 1.5, 0.1, 1.5, 1.5, 0.1, -1.5, 1.5, -0.1, 1.5, 1.5, 0.1, -1.5, 1.5, -0.1, -1.5, 1.5, -0.1, 1.5, -1.5, 0.1, -1.5, -1.5, 0.1, 1.5, -1.5, -0.1, -1.5, -1.5, 0.1, 1.5, -1.5, -0.1, 1.5, -1.5, -0.1, -1.5, 1.5, 0.1, 1.5, -1.5, 0.1, 1.5, 1.5, 0.1, -1.5, -1.5, 0.1, 1.5, -1.5, 0.1, -1.5, 1.5, 0.1, -1.5, -1.5, -0.1, 1.5, 1.5, -0.1, 1.5, -1.5, -0.1, -1.5, 1.5, -0.1, 1.5, 1.5, -0.1, -1.5, -1.5, -0.1, -1.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pu1lc"]
-size = Vector3(3.01733, 0.212387, 3.00549)
+size = Vector3(3.017, 0.557, 3.005)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_psvvu"]
 resource_name = "Material"
@@ -52,26 +52,26 @@ shadow_mesh = SubResource("ArrayMesh_r3hex")
 albedo_texture = ExtResource("2_s4hac")
 uv1_scale = Vector3(3.33, 3.33, 3.33)
 
-[node name="sticky" type="StaticBody3D"]
+[node name="sticky" type="StaticBody3D" unique_id=479848575]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_qhfyq")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1017603693]
 shape = SubResource("ConcavePolygonShape3D_w06eb")
 
-[node name="stickyArea" type="Area3D" parent="."]
+[node name="stickyArea" type="Area3D" parent="." unique_id=69453583]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="stickyArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stickyArea" unique_id=179878808]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00622559, 0.00431061, 0.00518799)
 shape = SubResource("BoxShape3D_pu1lc")
 
-[node name="Cube" type="MeshInstance3D" parent="."]
+[node name="Cube" type="MeshInstance3D" parent="." unique_id=1072469355]
 transform = Transform3D(-0.00505034, 5.28754e-09, 1.50358, 6.89622e-08, 0.120577, -6.57234e-08, -1.57261, 5.27058e-09, -0.00482864, 0, 0, 0)
 mesh = SubResource("ArrayMesh_n5mvk")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_4rwlp")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=555645899]
 stream = ExtResource("3_41ru6")
 
 [connection signal="body_entered" from="stickyArea" to="." method="_on_sticky_area_body_entered"]

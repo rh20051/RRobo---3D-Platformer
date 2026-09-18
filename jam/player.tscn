@@ -1,10 +1,9 @@
-[gd_scene load_steps=59 format=4 uid="uid://b3yk6lw3lcghj"]
+[gd_scene format=4 uid="uid://b3yk6lw3lcghj"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_tq5mr"]
-[ext_resource type="Script" path="res://animationControl.gd" id="2_7erti"]
+[ext_resource type="Script" uid="uid://cijywysc3r3uo" path="res://player.gd" id="1_tq5mr"]
+[ext_resource type="Script" uid="uid://cvkk444q2k5ml" path="res://animationControl.gd" id="2_7erti"]
 [ext_resource type="Texture2D" uid="uid://bbqo57nmy57eu" path="res://robo_robo Base Color.png" id="2_ba0rm"]
 [ext_resource type="AudioStream" uid="uid://gpr4w8el4bbo" path="res://snd_player_jump.ogg" id="4_d3fa2"]
-[ext_resource type="AudioStream" uid="uid://bv4p72ya2ebog" path="res://SunsetWalk.ogg" id="5_syy76"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_flhsv"]
 
@@ -229,7 +228,7 @@ states/move3/position = Vector2(679, 29)
 states/stuck/node = SubResource("AnimationNodeAnimation_ynscs")
 states/stuck/position = Vector2(801, 134)
 transitions = ["move1", "move2", SubResource("AnimationNodeStateMachineTransition_7shxf"), "move2", "move3", SubResource("AnimationNodeStateMachineTransition_2wu5v"), "idle", "move1", SubResource("AnimationNodeStateMachineTransition_jkej4"), "idle", "jumpStart", SubResource("AnimationNodeStateMachineTransition_2t1q1"), "move1", "jumpStart", SubResource("AnimationNodeStateMachineTransition_qh630"), "move2", "jumpStart", SubResource("AnimationNodeStateMachineTransition_0vjg1"), "move3", "jumpStart", SubResource("AnimationNodeStateMachineTransition_rj2rc"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_xx7y6"), "jumpStart", "jumpUp1", SubResource("AnimationNodeStateMachineTransition_i1age"), "jumpStart", "jumpUp2", SubResource("AnimationNodeStateMachineTransition_6i2u0"), "jumpStart", "jumpUp3", SubResource("AnimationNodeStateMachineTransition_dltu7"), "jumpUp3", "jumpDown", SubResource("AnimationNodeStateMachineTransition_tltms"), "jumpUp2", "jumpDown", SubResource("AnimationNodeStateMachineTransition_8pjcm"), "jumpUp1", "jumpDown", SubResource("AnimationNodeStateMachineTransition_ew73r"), "move1", "idle", SubResource("AnimationNodeStateMachineTransition_11r52"), "jumpDown", "idle", SubResource("AnimationNodeStateMachineTransition_erb1h"), "jumpDown", "move1", SubResource("AnimationNodeStateMachineTransition_f0d07"), "move2", "idle", SubResource("AnimationNodeStateMachineTransition_e7mli"), "move3", "idle", SubResource("AnimationNodeStateMachineTransition_n1hdi"), "jumpUp3", "stuck", SubResource("AnimationNodeStateMachineTransition_kbw65"), "jumpUp2", "stuck", SubResource("AnimationNodeStateMachineTransition_6ubg8"), "jumpUp1", "stuck", SubResource("AnimationNodeStateMachineTransition_d7r8k"), "jumpDown", "stuck", SubResource("AnimationNodeStateMachineTransition_0ouwf"), "stuck", "jumpDown", SubResource("AnimationNodeStateMachineTransition_dfrx2"), "idle", "stuck", SubResource("AnimationNodeStateMachineTransition_icsoh"), "move1", "stuck", SubResource("AnimationNodeStateMachineTransition_u48n7")]
-graph_offset = Vector2(-225, -64)
+graph_offset = Vector2(-163, 76)
 
 [sub_resource type="Animation" id="Animation_ioo3t"]
 resource_name = "default"
@@ -1052,120 +1051,120 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0.999531, 0.0165848, 0.00275942, 0.0256
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jf3cv"]
 _data = {
-"default": SubResource("Animation_ioo3t"),
-"idle": SubResource("Animation_phoc6"),
-"jumpDown": SubResource("Animation_nb3xu"),
-"jumpStart": SubResource("Animation_wpi1e"),
-"jumpUp1": SubResource("Animation_h84t1"),
-"jumpUp2": SubResource("Animation_oep8k"),
-"jumpUp3": SubResource("Animation_lv5on"),
-"move1": SubResource("Animation_fvxx2"),
-"move2": SubResource("Animation_87jtv"),
-"move3": SubResource("Animation_bxcay"),
-"stuck": SubResource("Animation_88uuc")
+&"default": SubResource("Animation_ioo3t"),
+&"idle": SubResource("Animation_phoc6"),
+&"jumpDown": SubResource("Animation_nb3xu"),
+&"jumpStart": SubResource("Animation_wpi1e"),
+&"jumpUp1": SubResource("Animation_h84t1"),
+&"jumpUp2": SubResource("Animation_oep8k"),
+&"jumpUp3": SubResource("Animation_lv5on"),
+&"move1": SubResource("Animation_fvxx2"),
+&"move2": SubResource("Animation_87jtv"),
+&"move3": SubResource("Animation_bxcay"),
+&"stuck": SubResource("Animation_88uuc")
 }
 
-[node name="lilguy" type="CharacterBody3D" groups=["player"]]
+[node name="lilguy" type="CharacterBody3D" unique_id=1085907935 groups=["player"]]
 script = ExtResource("1_tq5mr")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1718099526]
 shape = SubResource("CapsuleShape3D_flhsv")
 
-[node name="cameraPoint" type="Node3D" parent="."]
+[node name="cameraPoint" type="Node3D" parent="." unique_id=76450907]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.20109, -0.00996053)
 
-[node name="Camera3D" type="Camera3D" parent="cameraPoint"]
+[node name="Camera3D" type="Camera3D" parent="cameraPoint" unique_id=1723799967]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.535136, 5.42236)
 
-[node name="winMenu" type="VBoxContainer" parent="."]
+[node name="winMenu" type="VBoxContainer" parent="." unique_id=2033142171]
 visible = false
 offset_left = 560.0
 offset_top = 221.0
 offset_right = 1360.0
 offset_bottom = 496.0
 
-[node name="Label" type="Label" parent="winMenu"]
+[node name="Label" type="Label" parent="winMenu" unique_id=1628926278]
 layout_mode = 2
 theme_override_font_sizes/font_size = 101
 text = "Level Complete"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="winMenu"]
+[node name="Button" type="Button" parent="winMenu" unique_id=870908599]
 layout_mode = 2
 theme_override_font_sizes/font_size = 70
 text = "Continue"
 
-[node name="Button2" type="Button" parent="winMenu"]
+[node name="Button2" type="Button" parent="winMenu" unique_id=1611907319]
 layout_mode = 2
 theme_override_font_sizes/font_size = 70
 text = "Quit"
 
-[node name="tripleJumpTimer" type="Timer" parent="."]
-wait_time = 0.3
+[node name="tripleJumpTimer" type="Timer" parent="." unique_id=429948076]
+wait_time = 0.009
 one_shot = true
 
-[node name="Armature" type="Node3D" parent="."]
+[node name="Armature" type="Node3D" parent="." unique_id=1523955070]
 transform = Transform3D(0.442, 0, 0, 0, 0.442, 0, 0, 0, 0.442, -0.020038, -0.91429, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Armature"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Armature" unique_id=1824091789]
 bones/0/name = "spine1"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-09, -9.31323e-10, 0)
 bones/0/enabled = true
-bones/0/position = Vector3(4.44089e-16, -2.23634e-10, -6.85194e-10)
-bones/0/rotation = Quaternion(-0.398534, 0, 8.84923e-17, 0.917154)
+bones/0/position = Vector3(0, -0.008139152, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
 bones/0/scale = Vector3(1, 1, 1)
 bones/1/name = "spine2"
 bones/1/parent = 0
 bones/1/rest = Transform3D(0.999987, 0.00505041, -1.45311e-08, -0.00505041, 0.999987, -1.34283e-07, 1.38528e-08, 1.34354e-07, 1, 3.72529e-09, 1, 0)
 bones/1/enabled = true
 bones/1/position = Vector3(3.72529e-09, 1, 0)
-bones/1/rotation = Quaternion(0.361254, 0.000912242, -0.00235468, 0.932464)
+bones/1/rotation = Quaternion(6.715949e-08, -7.0959993e-09, -0.0025252195, 0.9999969)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "spine3"
 bones/2/parent = 1
 bones/2/rest = Transform3D(1, -0.000219569, -1.44366e-08, 0.000219569, 1, -4.07251e-12, 1.44366e-08, 9.02678e-13, 1, -3.72529e-09, 0.991698, -1.67089e-14)
 bones/2/enabled = true
 bones/2/position = Vector3(-3.72529e-09, 0.991698, -1.67089e-14)
-bones/2/rotation = Quaternion(-3.72453e-09, -7.21847e-09, 0.000109784, 1)
+bones/2/rotation = Quaternion(1.24735e-12, -7.2183e-09, 0.000109785, 1)
 bones/2/scale = Vector3(1, 1, 1)
 bones/3/name = "armL"
 bones/3/parent = 1
 bones/3/rest = Transform3D(0.0062589, 0.999378, 0.0347028, -0.999378, 0.00504702, 0.0348996, 0.0347028, -0.0348996, 0.998788, -3.72529e-09, 0.991698, -1.67089e-14)
 bones/3/enabled = true
 bones/3/position = Vector3(-3.72529e-09, 0.991698, -1.67089e-14)
-bones/3/rotation = Quaternion(-0.0246157, -8.62372e-09, -0.70489, 0.708889)
+bones/3/rotation = Quaternion(-0.024615707, -4.2197867e-09, -0.70489013, 0.7088892)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "armR"
 bones/4/parent = 1
 bones/4/rest = Transform3D(0.00223392, -0.999411, 0.0342442, 0.999411, 0.00105864, -0.0343006, 0.0342442, 0.0343007, 0.998825, -3.72529e-09, 0.991698, -1.67089e-14)
 bones/4/enabled = true
 bones/4/position = Vector3(-3.72529e-09, 0.991698, -1.67089e-14)
-bones/4/rotation = Quaternion(0.0242414, 1.03448e-08, 0.706317, 0.707481)
+bones/4/rotation = Quaternion(0.024241392, 9.249662e-09, 0.70631677, 0.7074807)
 bones/4/scale = Vector3(1, 1, 1)
 bones/5/name = "base2"
 bones/5/parent = -1
 bones/5/rest = Transform3D(-0.996455, -0.043839, -0.0718169, -0.0703349, -0.034463, 0.996929, -0.0461794, 0.998444, 0.0312575, 3.72529e-09, -9.31323e-10, 0)
 bones/5/enabled = true
-bones/5/position = Vector3(4.44089e-16, -5.58396e-10, -1.01512e-09)
-bones/5/rotation = Quaternion(-0.0226895, 0.998892, 0.0210102, -0.0354714)
+bones/5/position = Vector3(0, 0, 0)
+bones/5/rotation = Quaternion(-0.041084196, 0.69475394, 0.71801394, -0.0092254)
 bones/5/scale = Vector3(1, 1, 1)
 bones/6/name = "base1"
 bones/6/parent = -1
 bones/6/rest = Transform3D(0.999435, 0.0330126, 0.00636566, -0.00626221, -0.00323617, 0.999975, 0.0330324, -0.99945, -0.00302756, 3.72529e-09, -9.31323e-10, 0)
 bones/6/enabled = true
-bones/6/position = Vector3(4.44089e-16, -5.6937e-10, -1.03615e-09)
-bones/6/rotation = Quaternion(-0.999531, -0.0165848, -0.00275942, -0.025608)
+bones/6/position = Vector3(0, 0, 0)
+bones/6/rotation = Quaternion(-0.708113, -0.00944426, -0.013909501, 0.705899)
 bones/6/scale = Vector3(1, 1, 1)
 
-[node name="Cube" type="MeshInstance3D" parent="Armature/Skeleton3D"]
+[node name="Cube" type="MeshInstance3D" parent="Armature/Skeleton3D" unique_id=568696358]
 mesh = SubResource("ArrayMesh_bwvyw")
 skin = SubResource("Skin_apbri")
 
-[node name="animationControl" type="Node" parent="."]
+[node name="animationControl" type="Node" parent="." unique_id=83128930]
 script = ExtResource("2_7erti")
 
-[node name="AnimationTree" type="AnimationTree" parent="animationControl"]
+[node name="AnimationTree" type="AnimationTree" parent="animationControl" unique_id=946151236]
 root_node = NodePath("../..")
 tree_root = SubResource("AnimationNodeStateMachine_qltog")
 advance_expression_base_node = NodePath("../..")
@@ -1183,15 +1182,13 @@ parameters/conditions/tjumpstreak0 = false
 parameters/conditions/tjumpstreak1 = false
 parameters/conditions/tjumpstreak2 = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="animationControl"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="animationControl" unique_id=1848673286]
 active = false
 reset_on_save = false
 root_node = NodePath("../..")
-libraries = {
-"": SubResource("AnimationLibrary_jf3cv")
-}
+libraries/ = SubResource("AnimationLibrary_jf3cv")
 
-[node name="tutorial" type="Label" parent="."]
+[node name="tutorial" type="Label" parent="." unique_id=307845307]
 offset_left = 441.0
 offset_top = 93.0
 offset_right = 1443.0
@@ -1205,7 +1202,7 @@ increasing your jump distance."
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="Button" type="Button" parent="tutorial"]
+[node name="Button" type="Button" parent="tutorial" unique_id=1060496285]
 layout_mode = 0
 offset_left = 327.0
 offset_top = 420.0
@@ -1214,14 +1211,12 @@ offset_bottom = 554.0
 theme_override_font_sizes/font_size = 56
 text = "OK!"
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1047616073]
 stream = ExtResource("4_d3fa2")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_syy76")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1725863831]
 volume_db = -6.0
 autoplay = true
-parameters/looping = true
 
 [connection signal="pressed" from="winMenu/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="winMenu/Button2" to="." method="_on_button_2_pressed"]

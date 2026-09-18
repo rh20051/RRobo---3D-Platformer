@@ -5,7 +5,7 @@ extends CharacterBody3D
 var levelComplete = false
 
 var stick = false
-var airSpeed = 4.0
+var airSpeed = 2.5
 var bounced = false
 var bouncedBody 
 var stickFall = false
@@ -15,12 +15,15 @@ var tripleJumpStreak = 0
 var camRotx = 0.0
 var camRoty = 0.0
 var SPEED = 7.0
-var canTripleJump = false
+var canTripleJump = false #check if possible to triple jump currently
 const JUMP_VELOCITY = 13
-var onPlat = false
+var onPlat = false #check if on floating platform
 var currentPlatform = StaticBody3D
 func _ready() -> void:
+	#sets the level message for each level, and plays the music
+	#musicProgress allows the music to play continuously across levels without restarting
 	$AudioStreamPlayer.play(Global.musicProgress)   
+	
 	if Global.currentLevel == 2:
 		$tutorial.text = "Jump up to 3 times in succession to boost
 		 the height of the jump"
@@ -38,7 +41,7 @@ func _ready() -> void:
 		one retains your momentum
 		until you get off"
 	elif Global.currentLevel == 6:
-		$tutorial.text = "Blue platforms bounce you"
+		$tutorial.text = "Blue platforms bounce you away"
 	elif Global.currentLevel != 1:
 		$tutorial.visible = false
 	if $tutorial.visible == true:
@@ -49,6 +52,7 @@ func _ready() -> void:
 		$winMenu/Button.visible = false
 	
 
+#handles camera control
 func _input(event: InputEvent) -> void:
 	if levelComplete == false and $tutorial.visible == false:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -58,16 +62,22 @@ func _input(event: InputEvent) -> void:
 			cam.transform.basis = Basis() # reset rotation
 			cam.rotation.x += -camRoty
 			cam.rotation.y += -camRotx
-
+	
+#handles all checks for level completion, movement input, and level mechanics
 func _physics_process(delta: float) -> void:
+	#exception for level 6, spawning at a different location for that level
 	if self.global_position.y < -40 and Global.currentLevel != 6:
 		self.global_position = Vector3(0,0,0)
 	elif self.global_position.y < -40:
 		self.global_position = Vector3(14,14,0)
+		
 	if momentum == 2:
 		$momentumTimer.stop()
+		
+	#call function for applying momentum of moving platform to player
 	if onPlat == true:
 		onPlatform(currentPlatform)
+		
 	if stickFall == true:
 		if is_on_floor():
 			stickFall = false
@@ -75,28 +85,31 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor():
 			bounced = false
 			bouncedBody = null
-			
+	
+	#return mouse control to menu on level completion to continue
 	if levelComplete == true:
 		endMenu.visible = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	# Add the gravity.
+
+	#gravity
 	if not is_on_floor():
 		if stick == false:
 			velocity += get_gravity() * delta * 2.5
 		$tripleJumpTimer.stop()
-	if is_on_floor():    
-		if canTripleJump:
-			if $tripleJumpTimer.is_stopped():
-				$tripleJumpTimer.start(.4)
-
+	
+	#if character grounded, check for input for consecutive jump	
+	if is_on_floor():
+		if $tripleJumpTimer.is_stopped():
+			$tripleJumpTimer.start(.3)
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("jump"):
 		if stick == false and is_on_floor():
 			await get_tree().create_timer(.2).timeout
 			$AudioStreamPlayer3D.play()
 			
+			#tripleJumpStreak refers to the consecutive jumps performed for higher velocity, up to 3 
 			velocity.y = JUMP_VELOCITY + (3.0 * tripleJumpStreak)
-			if tripleJumpStreak <2:
+			if tripleJumpStreak <=2:
 				tripleJumpStreak+=1
 				if tripleJumpStreak == 2:
 					canTripleJump = true
@@ -106,13 +119,14 @@ func _physics_process(delta: float) -> void:
 
 			velocity.y = JUMP_VELOCITY + (3.0)
 
-	if velocity.y < 0 and tripleJumpStreak == 3:
+	if velocity.y <= 0 and tripleJumpStreak == 3:
 		tripleJumpStreak = 0
 
 	
 	var input_dir := Input.get_vector("left", "right", "forward", "back")
-	
+
 	direction = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
 	if bounced:
 		if direction.x or direction.z:
 			velocity.x = direction.x * 5 + -bouncedBody.rotation.z * 20
@@ -173,6 +187,7 @@ func _on_button_pressed() -> void:
 func _on_triple_jump_timer_timeout() -> void:
 	canTripleJump = false
 	tripleJumpStreak = 0
+
 
 
 func _on_button_2_pressed() -> void:
